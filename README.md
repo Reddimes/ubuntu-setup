@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/Reddimes/ubuntu-setup/refs/heads/main/init.sh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
