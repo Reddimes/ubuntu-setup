@@ -15,7 +15,8 @@ git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git $ZSH/p
 sed  -i 's/robbyrussell/clean/' ~/.zshrc
 sed  -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)/g' /home/jeff/.zshrc
 
+echo $USER
 sudo chsh $USER -s /usr/bin/zsh
 clear
-rm ./install.sh
+# rm ./install.sh
 /usr/bin/zsh
