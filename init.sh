@@ -17,6 +17,6 @@ sed  -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-hi
 
 echo $USER
 sudo chsh $USER -s /usr/bin/zsh
-# clear
-# rm ./install.sh
+clear
+rm ./install.sh
 /usr/bin/zsh
