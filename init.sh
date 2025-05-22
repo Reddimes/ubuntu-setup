@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install zsh neovim
+sudo apt install zsh neovim -y
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
