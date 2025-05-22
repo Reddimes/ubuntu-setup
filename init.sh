@@ -1,11 +1,19 @@
 sudo apt update
 sudo apt install zsh neovim -y
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
-git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
-git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 
-sed -i 's/robbyrussell/clean/' ~/.zshrc
-sed -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)/' ~/.zshrc
+ZSH=~/.oh-my-zsh
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+chmod +x ./install.sh
+sh ./install.sh --unattended
+
+git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/plugins/zsh-autosuggestions
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH/plugins/fast-syntax-highlighting
+git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git $ZSH/plugins/zsh-autocomplete
+
+sed  -i 's/robbyrussell/clean/' ~/.zshrc
+sed  -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)/g' /home/jeff/.zshrc
+source ~/.zshrc
+clear
+rm ./install.sh
