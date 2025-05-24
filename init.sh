@@ -13,7 +13,7 @@ git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlightin
 git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git $ZSH/plugins/zsh-autocomplete
 
 sed  -i 's/robbyrussell/clean/' ~/.zshrc
-sed  -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)/g' /home/jeff/.zshrc
+sed  -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)/g' ~/.zshrc
 
 echo $USER
 sudo chsh $USER -s /usr/bin/zsh
